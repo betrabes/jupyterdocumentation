@@ -1,0 +1,7 @@
+# Go to https://fred.stlouisfed.org/series/T5YIE and download the data in the excel format
+
+# Start by importing the pandas package
+import pandas as pd
+
+# download the data into your jupyter notebook
+workbook = pd.read_excel('T5YIE.xlsx')
