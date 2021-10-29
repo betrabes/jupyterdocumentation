@@ -1,7 +1,40 @@
-# Go to https://fred.stlouisfed.org/series/T5YIE and download the data in the excel format
+# go to this website:
+https://jupyter.org/
 
-# Start by importing the pandas package
+# next go to the install page
+# use one of the installation methods
+# (I reccomend using pip with the command:)
+
+pip install jupyterlab
+
+# Once you have installed jupyter run the following command in your command line:
+jupyter-lab
+
+# Go to https://fred.stlouisfed.org/series/T5YIE and download the data in the csv format
+
+# create a new folder for your project
+
+# import the csv file into the folder
+
+# next, create a new file by clicking on the following:
+file -> new -> Notebook
+
+# Start by importing the pandas and matplotlib packages
 import pandas as pd
+import matplotlib.pyplot as plot
 
-# download the data into your jupyter notebook
-workbook = pd.read_excel('T5YIE.xlsx')
+# next create a dataframe that reads the data from the csv file using the code: 
+df = pd.read_csv('T5YIE.csv')
+
+# finally plot the data using the following for loop:
+for column in df.columns:
+    plot.title('T5YIE')
+    plot.plot(df['T5YIE'])
+    plot.show()
+
+# Congradulations, you are done!
+# see the following picture link for how it should look:
+
+https://github.com/betrabes/jupyterdocumentation/blob/main/Screen%20Shot%202021-10-28%20at%2011.12.37%20PM.png
+
+
